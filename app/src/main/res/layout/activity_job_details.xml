@@ -3,12 +3,14 @@
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary_light"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <ImageView
@@ -24,7 +26,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/ivJobImage"
-            android:textColor="@color/primary_dark" />
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:id="@+id/tvJobDescription"
@@ -33,6 +37,7 @@
             android:layout_below="@id/tvJobTitle"
             android:layout_margin="@dimen/fab_margin"
             android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/primary_text"
             android:text="Maintains a clean, sanitary and safe health care environment by daily cleaning and supplying of patient rooms, nursing stations,lounges, lavatories."
             android:textSize="@dimen/normal_text_size" />
 
@@ -46,7 +51,7 @@
             />
 
         <TextView
-            android:id="@+id/tvPlace"
+            android:id="@+id/tvPlaceInDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/ivLocation"
@@ -61,34 +66,44 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@id/ivLocation"
-            android:layout_below="@id/ivLocation"
+            android:layout_below="@id/tvPlaceInDetail"
             android:src="@drawable/ic_attach_money_black_48dp" />
 
         <TextView
-            android:id="@+id/tvAmount"
+            android:id="@+id/tvAmountInDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/tvPlace"
+            android:layout_alignLeft="@id/tvPlaceInDetail"
             android:layout_alignTop="@id/ivMoney"
-            android:layout_below="@id/tvPlace"
+            android:layout_below="@id/tvPlaceInDetail"
             android:text="3000"
             android:textColor="@color/primary_text"
             android:textSize="15dp" />
 
         <TextView
-            android:id="@+id/tvDuration"
+            android:id="@+id/tvDurationInDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/ivMoney"
-            android:layout_below="@id/tvPlace"
+            android:layout_below="@id/tvPlaceInDetail"
             android:layout_marginLeft="5dp"
-            android:layout_toEndOf="@id/tvAmount"
+            android:layout_toEndOf="@id/tvAmountInDetail"
             android:text="per month"
             android:textColor="@color/primary_text" />
 
 
+        <TextView
+            android:id="@+id/tvImportantNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To take laptop"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_below="@id/tvDurationInDetail"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_marginLeft="@dimen/fab_margin"
 
-
+            />
     </RelativeLayout>
 
 </ScrollView>

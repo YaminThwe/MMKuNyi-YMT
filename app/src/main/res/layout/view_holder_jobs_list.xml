@@ -21,7 +21,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/primary"
-
                 >
                 <TextView
                     android:id="@+id/tvTitle"
@@ -32,9 +31,10 @@
                     android:layout_marginLeft="@dimen/fab_margin"
                     />
                 <TextView
+                    android:id="@+id/tvPostedDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="posted Date: 19.3.1997"
+                    android:text="posted Date: "
                     android:layout_below="@id/tvTitle"
                     android:layout_alignLeft="@id/tvTitle"
                     android:layout_marginBottom="@dimen/fab_margin"
@@ -45,7 +45,9 @@
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@color/primary_light"
+                >
 
                 <TextView
                     android:id="@+id/tvShortDescription"
@@ -81,7 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@id/ivLocation"
-                    android:layout_below="@id/ivLocation"
+                    android:layout_below="@id/tvPlace"
                     android:src="@drawable/ic_attach_money_black_48dp" />
 
                 <TextView

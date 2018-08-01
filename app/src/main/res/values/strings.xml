@@ -1,3 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">MMKuNyi</string>
+    <string name="posted_date">Posted Date:<xliff:g id="date">%1$s</xliff:g></string>
 </resources>
