@@ -14,7 +14,51 @@
         <item name="android:text">HouseKeeping</item>
         <item name="android:layout_marginLeft">@dimen/fab_margin</item>
         <item name="android:layout_marginTop">@dimen/fab_margin</item>
-
     </style>
 
+    <style name="LabelStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primary_dark</item>
+        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:layout_marginLeft">@dimen/fab_margin</item>
+    </style>
+
+    <style name="ContentStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="AppButton">
+        <item name="android:paddingLeft">@dimen/margin_medium_2</item>
+        <item name="android:paddingRight">@dimen/margin_medium_2</item>
+        <item name="android:textSize">@dimen/text_regular_2x</item>
+        <item name="android:textColor">@color/white_full</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:shadowColor">@color/black_full</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+
+    <style name="AccentButton" parent="AppButton">
+        <item name="android:background">@drawable/bg_round_accent</item>
+        <item name="android:foreground">@drawable/bg_ripple_white</item>
+    </style>
+
+    <color name="black_full">#000000</color>
+    <dimen name="text_regular_2x">16sp</dimen>
 </resources>

@@ -1,4 +1,4 @@
-package com.padcmyanmar.mmkunyi.viewholders
+package com.padcmyanmar.mmkunyi.view.holders
 
 import android.support.v7.widget.RecyclerView
 import android.view.View

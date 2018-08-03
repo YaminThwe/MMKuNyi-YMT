@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.padcmyanmar.mmkunyi.view.pods.BeforeLoginViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/accent"
+    android:layout_height="220dp">
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:background="@color/primary"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="20dp"
+        />
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:background="@color/primary"
+        android:layout_below="@id/loginButton"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        />
+
+</com.padcmyanmar.mmkunyi.view.pods.BeforeLoginViewPod>

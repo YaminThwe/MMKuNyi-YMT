@@ -1,4 +1,11 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">MMKuNyi</string>
     <string name="posted_date">Posted Date:<xliff:g id="date">%1$s</xliff:g></string>
+
+    <string name="phone">Phone no: <xliff:g id="phoneNo">%1$s</xliff:g></string>
+    <string name="email">Email: <xliff:g id="email">%1$s</xliff:g></string>
+    <string name="viewed"><xliff:g id="viewed">%1$d</xliff:g> viewed - </string>
+    <string name="interested"><xliff:g id="interested">%1$d</xliff:g> interested - </string>
+    <string name="applied"><xliff:g id="applied">%1$d</xliff:g> applied</string>
+    <string name="account_control">Welcome</string>
 </resources>

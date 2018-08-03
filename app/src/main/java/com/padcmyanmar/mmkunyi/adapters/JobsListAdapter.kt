@@ -5,8 +5,7 @@ import android.view.ViewGroup
 import com.padcmyanmar.mmkunyi.R
 import com.padcmyanmar.mmkunyi.data.vos.JobsVO
 import com.padcmyanmar.mmkunyi.delegate.JobsDelegate
-import com.padcmyanmar.mmkunyi.viewholders.BaseViewHolder
-import com.padcmyanmar.mmkunyi.viewholders.JobsListViewHolder
+import com.padcmyanmar.mmkunyi.view.holders.JobsListViewHolder
 
 class JobsListAdapter(context: Context, private val jobsDelegate: JobsDelegate) : BaseRecyclerAdapter<JobsListViewHolder, JobsVO>(context) {
 

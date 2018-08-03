@@ -10,7 +10,6 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <ImageView
@@ -28,6 +27,7 @@
             android:layout_below="@id/ivJobImage"
             android:textColor="@color/primary_text"
             android:textStyle="bold"
+            android:layout_marginRight="@dimen/fab_margin"
             />
 
         <TextView
@@ -41,13 +41,74 @@
             android:text="Maintains a clean, sanitary and safe health care environment by daily cleaning and supplying of patient rooms, nursing stations,lounges, lavatories."
             android:textSize="@dimen/normal_text_size" />
 
+        <TextView
+            android:id="@+id/tvRequiredLabel"
+            android:layout_below="@id/tvJobDescription"
+            android:text="Required Skill: "
+            style="@style/LabelStyle"
+            />
+
+        <TextView
+            android:id="@+id/tvRequiredSkill"
+            android:layout_below="@id/tvJobDescription"
+            android:layout_toEndOf="@id/tvRequiredLabel"
+            android:text="Good at Teaching"
+            style="@style/ContentStyle"
+            />
+
+        <TextView
+            android:id="@+id/tvStartDateLabel"
+            android:layout_below="@id/tvRequiredSkill"
+            android:text="Start Date:  "
+            style="@style/LabelStyle"
+            />
+        <TextView
+            android:id="@+id/tvStartDate"
+            android:layout_toEndOf="@id/tvStartDateLabel"
+            android:layout_alignTop="@id/tvStartDateLabel"
+            android:text="2017.8.13"
+            style="@style/ContentStyle"
+            />
+
+
+
         <ImageView
             android:id="@+id/ivLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvJobDescription"
+            android:layout_below="@id/tvHoursPerDayLabel"
             android:layout_marginLeft="@dimen/fab_margin"
             android:src="@drawable/ic_location_on_black_24dp"
+            android:layout_marginTop="@dimen/fab_margin"
+            />
+        <TextView
+            android:id="@+id/tvEndDateLabel"
+            android:layout_below="@id/tvStartDateLabel"
+            android:text="End Date:   "
+            style="@style/LabelStyle"
+            />
+
+        <TextView
+            android:id="@+id/tvEndDate"
+            android:layout_toEndOf="@id/tvEndDateLabel"
+            android:layout_alignTop="@id/tvEndDateLabel"
+            android:text="2017.8.13"
+            style="@style/ContentStyle"
+            />
+
+        <TextView
+            android:id="@+id/tvTotalWorkDayLabel"
+            android:text="Total Working Date:  "
+            android:layout_below="@id/tvEndDateLabel"
+            style="@style/LabelStyle"
+            />
+
+        <TextView
+            android:id="@+id/tvTotalWorkDay"
+            android:layout_toEndOf="@id/tvTotalWorkDayLabel"
+            android:layout_alignTop="@id/tvTotalWorkDayLabel"
+            android:text="24"
+            style="@style/ContentStyle"
             />
 
         <TextView
@@ -55,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/ivLocation"
-            android:layout_below="@id/tvShortDescription"
+            android:layout_below="@id/tvTotalWorkDayLabel"
             android:layout_toEndOf="@id/ivLocation"
             android:text="North Okkalapa"
             android:textColor="@color/primary_text"
@@ -91,6 +152,34 @@
             android:text="per month"
             android:textColor="@color/primary_text" />
 
+        <TextView
+            android:id="@+id/tvDaysPerWeekLabel"
+            android:layout_below="@id/tvTotalWorkDayLabel"
+            android:text="Days Per Week: "
+            style="@style/LabelStyle"
+            />
+        <TextView
+            android:id="@+id/tvDaysPerWeek"
+            android:layout_toEndOf="@id/tvDaysPerWeekLabel"
+            android:text="4"
+            android:layout_alignTop="@id/tvDaysPerWeekLabel"
+            style="@style/ContentStyle"
+            />
+
+        <TextView
+            android:id="@+id/tvHoursPerDayLabel"
+            android:layout_below="@id/tvDaysPerWeekLabel"
+            android:text="Hours Per Day:  "
+            style="@style/LabelStyle"
+            />
+        <TextView
+            android:id="@+id/tvHoursPerDay"
+            android:layout_toEndOf="@id/tvHoursPerDayLabel"
+            android:layout_alignTop="@id/tvHoursPerDayLabel"
+            android:text="4"
+            style="@style/ContentStyle"
+            />
+
 
         <TextView
             android:id="@+id/tvImportantNotes"
@@ -99,10 +188,40 @@
             android:text="To take laptop"
             android:layout_marginTop="@dimen/fab_margin"
             android:layout_below="@id/tvDurationInDetail"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/primary_text"
             android:textSize="@dimen/normal_text_size"
             android:layout_marginLeft="@dimen/fab_margin"
+            android:textStyle="italic"
+            />
 
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvImportantNotes"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:text="If you're interested, please contact us!!"
+            android:textSize="@dimen/normal_text_size"
+            android:textColor="@color/primary_text"
+            android:layout_marginTop="@dimen/fab_margin"
+            />
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabel"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:text="email: yaminthwe1730@gmail.com"
+            android:textColor="@color/primary_dark"
+            />
+        <TextView
+            android:id="@+id/tvPhoneNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEmail"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:text="phone no: 09254067252"
+            android:textColor="@color/primary_dark"
             />
     </RelativeLayout>
 

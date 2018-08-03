@@ -1,16 +1,14 @@
-package com.padcmyanmar.mmkunyi.viewholders
+package com.padcmyanmar.mmkunyi.view.holders
 
+import android.annotation.SuppressLint
 import android.view.View
-import com.bumptech.glide.Glide
 import com.padcmyanmar.mmkunyi.R
-import com.padcmyanmar.mmkunyi.R.id.tvPostedDate
 import com.padcmyanmar.mmkunyi.data.vos.JobsVO
 import com.padcmyanmar.mmkunyi.delegate.JobsDelegate
-import kotlinx.android.synthetic.main.activity_job_details.view.*
-import kotlinx.android.synthetic.main.view_holder_jobs_list.*
 import kotlinx.android.synthetic.main.view_holder_jobs_list.view.*
 
 class JobsListViewHolder(itemView: View, private val jobsDelegate: JobsDelegate) : BaseViewHolder<JobsVO>(itemView) {
+    @SuppressLint("StringFormatInvalid")
     override fun setData(data: JobsVO) {
 
         kuNyiData = data
@@ -19,9 +17,20 @@ class JobsListViewHolder(itemView: View, private val jobsDelegate: JobsDelegate)
         itemView.tvPlace!!.text = data.location
         itemView.tvAmount!!.text = data.offerAmount!!.amount.toString()
         itemView.tvDuration!!.text = data.offerAmount!!.duration
+        itemView.tvTitle!!.text = data.jobTags[0].tag
 
-        val tvPostDate=itemView.resources.getString(R.string.posted_date, data.postedDate!!)
+        val tvPostDate = itemView.resources.getString(R.string.posted_date, data.postedDate!!)
         itemView.tvPostedDate!!.text = tvPostDate
+
+        val viewed = itemView.resources.getString(R.string.viewed, data.viewed.size)
+        itemView.tvViewed!!.text = viewed
+
+        val interested = itemView.resources.getString(R.string.interested, data.interested.size)
+        itemView.tvInterested!!.text = interested
+
+        val applied= itemView.resources.getString(R.string.applied,data.applicant.size)
+        itemView.tvApplied!!.text = applied
+
 
 
     }

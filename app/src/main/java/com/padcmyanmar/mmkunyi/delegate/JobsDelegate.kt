@@ -5,4 +5,5 @@ import com.padcmyanmar.mmkunyi.data.vos.JobsVO
 interface JobsDelegate
 {
     fun onTapJobList(jobList: JobsVO?)
+    fun onTapViewedList(jobList: JobsVO?)
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_job"
+        android:title="Menu"
+        android:checked="true"
+        />
+
+    <item
+        android:id="@+id/menu_favourite_jobs"
+        android:title="Favourite Jobs"
+        />
+
+    <item
+        android:id="@+id/menu_applied_jobs"
+        android:title="Applied Jobs"
+        />
+
+    <item
+        android:id="@+id/menu_about_us"
+        android:title="About Us"
+        />
+
+</menu>

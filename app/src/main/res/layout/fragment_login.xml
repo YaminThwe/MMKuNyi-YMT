@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/tv_greeting_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to PADC-5"
+            android:textColor="#FF0000"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/iv_greeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/google"
+            android:layout_above="@+id/tv_greeting_msg"
+            android:layout_centerHorizontal="true"
+            />
+
+
+        <EditText
+            android:id="@+id/et_user_phone"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your phone number"
+            android:layout_below="@+id/tv_greeting_msg"
+            android:layout_marginLeft="16dp"/>
+
+        <EditText
+            android:id="@+id/et_user_password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your password"
+            android:layout_below="@id/et_user_phone"
+            android:layout_marginLeft="16dp"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/btn_Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_below="@id/et_user_password"
+            android:layout_alignRight="@id/et_user_password"/>
+
+        <TextView
+            android:id="@+id/btn_register_new_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register New Account"
+            android:layout_below="@+id/btn_Login"
+            android:layout_alignRight="@+id/btn_Login"
+            android:padding="8dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

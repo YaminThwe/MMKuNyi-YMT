@@ -3,7 +3,7 @@ package com.padcmyanmar.mmkunyi.adapters
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
-import com.padcmyanmar.mmkunyi.viewholders.BaseViewHolder
+import com.padcmyanmar.mmkunyi.view.holders.BaseViewHolder
 import java.util.ArrayList
 
 abstract class BaseRecyclerAdapter<T, W>(context: Context) : RecyclerView.Adapter<BaseViewHolder<W>>() {
