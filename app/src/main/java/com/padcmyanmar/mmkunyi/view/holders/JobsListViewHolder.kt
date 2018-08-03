@@ -23,13 +23,13 @@ class JobsListViewHolder(itemView: View, private val jobsDelegate: JobsDelegate)
         itemView.tvPostedDate!!.text = tvPostDate
 
         val viewed = itemView.resources.getString(R.string.viewed, data.viewed.size)
-        itemView.tvViewed!!.text = viewed
+        itemView.tvViewedInDetail!!.text = viewed
 
         val interested = itemView.resources.getString(R.string.interested, data.interested.size)
-        itemView.tvInterested!!.text = interested
+        itemView.tvInterestedInDetail!!.text = interested
 
         val applied= itemView.resources.getString(R.string.applied,data.applicant.size)
-        itemView.tvApplied!!.text = applied
+        itemView.tvAppliedInDetail!!.text = applied
 
 
 

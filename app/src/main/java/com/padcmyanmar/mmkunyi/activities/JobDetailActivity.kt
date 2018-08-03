@@ -46,7 +46,7 @@ class JobDetailActivity : AppCompatActivity() {
         tvEndDate!!.text = jobsVO?.jobDuration!!.jobEndDate
         tvStartDate!!.text = jobsVO?.jobDuration!!.jobStartDate
         tvTotalWorkDay!!.text = jobsVO?.jobDuration!!.totalWorkingDays.toString()
-        tvDaysPerWeek!!.text = jobsVO?.jobDuration!!. workingDaysPerWeek.toString()
+        tvDaysPerWeek!!.text = jobsVO?.jobDuration!!.workingDaysPerWeek.toString()
         tvHoursPerDay!!.text = jobsVO?.jobDuration!!.workingHoursPerDay.toString()
 
         val email = applicationContext.resources.getString(R.string.email, jobsVO?.email)
@@ -80,21 +80,6 @@ class JobDetailActivity : AppCompatActivity() {
             }
             tvImportantNotes!!.text = importantNote
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

@@ -7,9 +7,11 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import com.padcmyanmar.mmkunyi.R
 import com.padcmyanmar.mmkunyi.adapters.JobsListAdapter
+import com.padcmyanmar.mmkunyi.components.SmartScrollListener
 import com.padcmyanmar.mmkunyi.data.models.JobsModel
 import com.padcmyanmar.mmkunyi.data.vos.JobsVO
 import com.padcmyanmar.mmkunyi.delegate.BeforeLoginDelegate
@@ -21,19 +23,19 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
-class MainActivity : BaseActivity(), JobsDelegate ,BeforeLoginDelegate{
+class MainActivity : BaseActivity(), JobsDelegate, BeforeLoginDelegate {
     override fun onTapLogin() {
-        Toast.makeText(applicationContext,"Navigate to Login", Toast.LENGTH_LONG).show()
+        Toast.makeText(applicationContext, "Navigate to Login", Toast.LENGTH_LONG).show()
 
-        val intent = Intent(applicationContext,AccountControlActivity::class.java)
+        val intent = Intent(applicationContext, AccountControlActivity::class.java)
         intent.putExtra("action_type", 1234)
         startActivity(intent)
     }
 
     override fun onTapRegister() {
-        Toast.makeText(applicationContext,"Navigate to Register", Toast.LENGTH_LONG).show()
+        Toast.makeText(applicationContext, "Navigate to Register", Toast.LENGTH_LONG).show()
 
-        val intent = Intent(applicationContext,AccountControlActivity::class.java)
+        val intent = Intent(applicationContext, AccountControlActivity::class.java)
         intent.putExtra("action_type", 4321)
         startActivity(intent)
     }
@@ -72,8 +74,7 @@ class MainActivity : BaseActivity(), JobsDelegate ,BeforeLoginDelegate{
         }
 
         navigationView.setNavigationItemSelectedListener {
-            for(menuItemIndex in 0 until navigationView.menu.size())
-            {
+            for (menuItemIndex in 0 until navigationView.menu.size()) {
                 navigationView.menu.getItem(menuItemIndex).isChecked = false
             }
             it.isChecked = true
@@ -109,15 +110,16 @@ class MainActivity : BaseActivity(), JobsDelegate ,BeforeLoginDelegate{
     fun onSuccessGetJobs(jobsLoadedEvent: SuccessEvent.JobsListLoadedEvent) {
         jobsAdapter!!.appendNewData(jobsLoadedEvent.loadedJobNews as MutableList<JobsVO>)
         swipeRefreshLayout.isRefreshing = false
+        vpEmpty.visibility = View.INVISIBLE
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onErrorNewsLoadedEvent(apiErrorEvent: ErrorEvent.ApiErrorEvent) {
         swipeRefreshLayout.isRefreshing = false
-        Snackbar.make(rvJobsList, "ERROR : " + apiErrorEvent.getMsg(), Snackbar.LENGTH_INDEFINITE)
+        Snackbar.make(rvJobsList, "ERROR : " + apiErrorEvent.getMsg(), Snackbar.LENGTH_SHORT)
                 .setAction("Action", null).show()
 
-
+        vpEmpty.visibility = View.VISIBLE
     }
 
 }

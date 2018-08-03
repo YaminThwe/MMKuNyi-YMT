@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/jobdetail" />
+            android:src="@drawable/jobs" />
 
         <TextView
             android:id="@+id/tvJobTitle"
@@ -188,7 +188,7 @@
             android:text="To take laptop"
             android:layout_marginTop="@dimen/fab_margin"
             android:layout_below="@id/tvDurationInDetail"
-            android:textColor="@color/primary_text"
+            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/normal_text_size"
             android:layout_marginLeft="@dimen/fab_margin"
             android:textStyle="italic"
@@ -223,6 +223,72 @@
             android:text="phone no: 09254067252"
             android:textColor="@color/primary_dark"
             />
+
+        <TextView
+            android:id="@+id/tvViewedInDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPhoneNo"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/secondary_text"
+            android:clickable="true"
+            android:text="3 viewed - "
+            />
+        <TextView
+            android:id="@+id/tvInterestedInDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tvViewedInDetail"
+            android:layout_alignTop="@id/tvViewedInDetail"
+            android:textColor="@color/secondary_text"
+            android:clickable="true"
+            android:text="4 interested - "
+            />
+        <TextView
+            android:id="@+id/tvAppliedInDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tvInterestedInDetail"
+            android:layout_alignTop="@id/tvInterestedInDetail"
+            android:textColor="@color/secondary_text"
+            android:clickable="true"
+            android:text="3 applied"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondary_text"
+            android:weightSum="3"
+            android:layout_below="@id/tvAppliedInDetail"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin"
+            >
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Interested"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Apply"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Favourite"
+                android:textAllCaps="false"
+                />
+
+        </LinearLayout>
     </RelativeLayout>
 
 </ScrollView>
